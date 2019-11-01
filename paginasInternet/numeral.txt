@@ -1,0 +1,10 @@
+8    - Link
+16   - logo
+21   - nav bar
+61   - postagem
+66   - area de postagem em destaque
+74   - area de postagem em destaque
+84   - Conteúdo de postagem em destaque
+94   - Conteúdo de postagem em destaque
+104  - Conteúdo de postagem em destaque
+114  - Conteúdo de postagem em destaque
