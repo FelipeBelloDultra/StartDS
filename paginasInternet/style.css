@@ -1649,3 +1649,136 @@ blockquote {
 /* ======= The End ======= */
 
 /*# sourceMappingURL=style.css.map */
+
+/* CSS reset */
+*, *:before, *:after { 
+  margin:0;
+  padding:0;
+  font-family: Arial,sans-serif;
+}
+
+body{
+  margin:10px;
+}
+
+a{
+  text-decoration: none;
+}
+
+/* esconde as ancoras da tela */
+a.links{
+  display: none;
+}
+
+/* content que contem os formulÃ¡rios */
+.content{
+  width: 500px;
+  margin: 0px auto;
+  position: relative;   
+}
+
+/* formatando o cabeÃ§alho dos formulÃ¡rios */
+h1{
+  font-size: 48px;
+  color: red;
+  padding: 10px 0;
+  font-family: Arial,sans-serif;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 30px;
+}
+h1:after{
+  content: ' ';
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 10px;
+  background: -webkit-linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
+  background: linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
+}
+
+p{
+  margin-bottom:15px;
+}
+p:first-child{
+  margin: 0px;
+}
+label{
+  color: black;
+  position: relative;
+}
+
+/**** advanced input styling ****/
+/* placeholder */
+::-webkit-input-placeholder  {
+  color: #bebcbc; 
+  font-style: italic;
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder{
+  color: #bebcbc;
+  font-style: italic;
+} 
+input {
+  outline: none;
+}
+
+input:not([type="checkbox"]){
+  width: 95%;
+  margin-top: 4px;
+  padding: 10px;    
+  border: 1px solid #b2b2b2;
+  
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+  box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+  
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+/*estilo do botÃ£o submit */
+input[type="submit"]{
+  width: 100%!important;
+  cursor: pointer;  
+  background: red;
+  padding: 8px 5px;
+  color: #fff;
+  font-size: 20px;  
+  border: 1px solid #fff;   
+  margin-bottom: 10px;  
+  text-shadow: 0 1px 1px #333;
+  
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  
+  transition: all 0.2s linear;
+}
+input[type="submit"]:hover{
+  background: red;
+}
+
+/*marcando os links para mudar de um formulÃ¡rio para outro */
+.link{
+  position: absolute;
+  background: #e1eaeb;
+  color: #7f7c7c;
+  left: 0px;
+  height: 20px;
+  width: 440px;
+  padding: 17px 3•›®ÒúpL*àÂ…5£l7F‡PëA¹ Ÿ£ ÃØ¥s¿…DAq°–'ZŞ^şKVÊ¬¡ËhûooE©u«Œ¤”\M¦¥dê-^á:$!µéJ×jù%–ªæRhãíéËYÖƒ([Fé\B£Ñ§[5é³ú¡JuŸ9~™Ã¸,[6WÖ-ZİyYƒµ«°£Ç¼ËD½Õ4yè`Ü¢š‚&°pEŠ²W.\Şò¥o¦aJUÕ4ÈšİÓ86widà¤¡¯ƒ¦DF¡PHˆ#79vYß	îƒû†;"}r<Ğ×bÊ…È`˜2øîi	Ç1óOÉ~fÄ#Ù‚€´Ê#eYÑ£œJrjn¥¥*èÎüÑ§µk>Í¦
+@Ñ(¿ügÆï9˜Ä¦§:ëäGuŠ¯×òSEÎf–>"Tæ^uE:şÎ¹Š ‚ÂŞ•ß·T»bÕz!£@`Úa[Mz¾+léÌS*šG§:™_»˜Œ¤’Ó×¾¦t)}@k>Ëz-“{‘ÁFÆš¹·fCî­üh±eî^å„š¼#"dYFñ÷²`è´=ùF=Œ÷L‹Ë47<]×ƒ•±àd9†M›i1Æ`>ç˜•K{„\¤¸aJ#:£ÔöœötÙÆ¦qú©	ìoË¥c£Ğá}níû«ó_n­7TTÎ¬èg›Æi;°NùÆeXØ€·Ü…•:.Ãía†ÇÍÌFSpÛYŸl·¿|^ñJK8¦}Ö&òl*­ü}Ülõ6ÌèXÏ{éÍpQmª´2ìıí…Ú
+àkJ»OHòî$Æ]%š×E@P´PÍçšrŒ¡nş‘rsûøè#—î´6j•Èóã™ò§2XJ´Ótqóhu¶ùõ]Š8oÙÎDáˆŸád«±¯uOoçœ¥EW™cCÈ ?Å2ÚQ:ÔË9¸¶\"%(È°Ñ«trö`¼WÏºr±à\qÙ'ÆDµ…ñqœI\;ñå‹
+­AáŠÀheP+
+Y…ˆíƒ†Îù\¯7¿‚FMÆæud„î
+úõ:ÇƒĞ*>Kù9&ıÎ„êãºn£H…t.£E©SÚ3ÇgÇğ¤AdZ2zgÓl$†0,hxV¡Ä±f½ñ9©AU+2¨İz7tA
+z‰ç	aÂ­:Ş
+
+Z-Ã})Ÿ±x½+z´·Úgqi¬©L9ÊpV›=×kŒ6 vº	€H¡4@Êl1i§¯á›™[ºĞŞ‚[8ó9ÉÜ°é´ÌL|êŒ1_Zÿüƒ…ïøËÌö™h:GŞWº9­ªÑmÏ8¬ñ¼ë¿v8¶›Fë0?”6rƒc¯dÓÉábŒ–Ò˜´Öâ˜H€úà„F°ÌeQŸÀ î  uxg˜§™ˆz˜‰xª˜™©™§›†«˜š©°¨zªª˜Š™ªx‰wšt›vª¨›ˆ‰¹˜™¹›š©©
+ª™©ŠwÊ¹ª¹š‰jyËyXjÌ©ºœ«š¬©«¬©¼ËÊ°ªÌ©»¼ª‰ª»¬w{¨yˆš¨ª˜™¹ª˜š«š¨™Ëªw‰¨º˜©ª‰‰©©i       Ì     ¨	      W|Ì    ‡¨  	  ‡˜À  À‡¨¼¬   w¸¹
+ À‡™Ë	  ‡ªÀ  ‡ÉÀ   À‡»Ì    À€›¼ °                           ©”0‘z‹ùäGŸ&ã!D²Ó\VL¥Z)ƒåÒÔ:p^¢U—É’šäƒÒJ¶——8(Õ=ZüÀĞİÔ&Ê7"ö#„ØĞz“‰c@åòu^MFíÇÏî–>Ğ–ë$0ÀlR±Í¡]Á·È<Ò”*6Ì}!D6	X™)ÚX=Jõê§+óİò©R®ı-/`™z¬ÕÁ¤©;e‰ê™6şT¨ÛåÌ²–ZH×ËøEÒ×c0²¬´‹¦aŒ2âÆ •|B_lz8KB´'_Ê‰ÅE	‰+ûÍø]=­ènwó?
+°`D¡é/@¼›=i¬ e£Ñhd+æV<r7Ui‡rµuÈ‡ªe¿óMm"Ş3ìÇõYwøáMùìë	ÌÓ<EÚÇõxÊN{BØ6¥¯_Ùt-+6rºŞ¢©Šßİ¦ç¯ı=½Ñ=40(ÙÕ>0 „¬µâÅØ"Cs4+†ò¥ÑVlÉIóFŠ¬rö¥”í/6bC9–XåÃLm•&¥´¤ì(Z›,UåğbmÚ6É¦a¶P›Ğ»åâƒı	Ï¦úCo¾“‡Kzˆy	ñ5‹éòª”0z6ñ7<:õ9ÀZuE­A2¾	r9ÑùéÈzƒ[îÈ¼£w§= ÅRÏ,–N˜¾_³ˆbzDåaQEÖt0È`åÂ‚8kõæçòÙÉ_©
+ÒÅŸÙÛÆ¶¿0N¹ÅdÙ»‰ßU°ZÏŞYcw¥Z½î$PPúZÊF™Ë!N¹KWÌÓP=Âİ9 İËÁËÓ*ä~…e¼ın¯=—<?±åÂfA3`°à”ßF‚ÅÌKé€¦XLô¼ë_‹¸…l¢Uq•Ï§ß'¦5óØLè+Í2/Xr"Òr}ôDWÿ×dU2ˆYzö¸³1dF‘Bäs£\ÛÅb—‡
+•K¥˜pdh)0?$ô¢¬§š¬Ş+hæŠƒé`Jr…æD(ÑµÈ£™yñ¸ò_ÏëÊ»|š6©=ÿ¸Æ5ğF*ş æ*†	­M(QWÇà8 µœwÒü)øÕ×?q]½ßÔh ÂYlêé(/„J

@@ -1,0 +1,31 @@
+10  = titulo
+14  = link
+21  = pre carregamento 
+31  = nav bar
+37  = logo area
+43  = marca nav
+90  = Início da área de contato
+101 = Detalhes do contato
+115 = Formulário de Contato
+123 = Início da área de entrada de mensagens
+126 = Área de entrada única
+132 = Área de entrada única
+138 = Área de entrada única
+144 = Área de entrada única
+150 = Área de entrada única
+164 = fim do site
+176 = carrousel / instagram
+176 = instagram slide
+185 = instagram slide
+191 = instagram slide
+198 = instagram slide
+203 = instagram slide
+209 = instagram slide
+221 = javascript
+222 = jquery
+224 = popper
+226 = bootstrap
+228 = all plugins
+230 = active
+
+
