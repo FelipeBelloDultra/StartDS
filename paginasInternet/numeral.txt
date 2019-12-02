@@ -4,7 +4,7 @@
 61   - postagem
 66   - area de postagem em destaque
 74   - area de postagem em destaque
-84   - Conteúdo de postagem em destaque
-94   - Conteúdo de postagem em destaque
-104  - Conteúdo de postagem em destaque
-114  - Conteúdo de postagem em destaque
+84   - Conteï¿½do de postagem em destaque
+94   - Conteï¿½do de postagem em destaque
+104  - Conteï¿½do de postagem em destaque
+114  - Conteï¿½do de postagem em destaque
