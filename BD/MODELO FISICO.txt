@@ -1,0 +1,58 @@
+CREATE TABLE CLIENTE (
+id_cliente NUMERIC(06) PRIMARY KEY,
+nome VARCHAR(50),
+cpf VARCHAR(11),
+rua VARCHAR(50),
+bairro VARCHAR(50),
+cidade VARCHAR(50),
+estado VARCHAR(50),
+cep VARCHAR(08),
+email VARCHAR(60),
+senha VARCHAR(15)
+);
+
+CREATE TABLE FORNECEDOR (
+cidade VARCHAR(50),
+rua VARCHAR(50),
+numero VARCHAR(50),
+mercadorias VARCHAR(50),
+cep VARCHAR(08),
+numero_da_empresa VARCHAR(06),
+cnpj VARCHAR(14),
+id_fornecedor NUMERIC(06) PRIMARY KEY
+);
+
+CREATE TABLE  PRODUTOS (
+id_produto NUMERIC(06) PRIMARY KEY,
+descricao VARCHAR(50),
+preco NUMERIC(5,2),
+quantidade NUMERIC(4),
+foto VARCHAR(60),
+unidade VARCHAR(2)
+);
+
+CREATE TABLE Pedido (
+id_pedido NUMERIC(06) PRIMARY KEY,
+data DATE
+);
+
+CREATE TABLE vende (
+id_fornecedor NUMERIC(06),
+id_produto NUMERIC(06),
+FOREIGN KEY(id_produto) REFERENCES  PRODUTOS (id_produto)
+);
+
+CREATE TABLE faz (
+id_pedido NUMERIC(06),
+id_cliente NUMERIC(06),
+FOREIGN KEY(ids_pedido) REFERENCES Pedido (id_pedido),
+FOREIGN KEY(id_cliente) REFERENCES CLIENTE (id_cliente)
+);
+
+CREATE TABLE tem (
+id_produto NUMERIC(06),
+id_pedido NUMERIC(06),
+quant VARCHAR(06),
+unidade VARCHAR(2),
+FOREIGN KEY(id_produto) REFERENCES  PRODUTOS (id_produto),
+FOREIGN KEY(id_pedido) REFERENCES Pedido (id_pedido));
