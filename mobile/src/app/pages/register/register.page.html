@@ -11,43 +11,48 @@
               <div class="ion-padding">
                 <ion-item class="rounded-top" color="white">
                   <ion-label position="floating">Nome:</ion-label>
-                  <ion-input type="text"></ion-input>
-                </ion-item>
-                <ion-item color="white">
-                  <ion-label position="floating">Email:</ion-label>
-                  <ion-input type="email"></ion-input>
-                </ion-item>
-                <ion-item color="white">
-                  <ion-label position="floating">Senha:</ion-label>
-                  <ion-input type="password"></ion-input>
-                </ion-item>
-                <ion-item color="white">
-                  <ion-label position="floating">Rua:</ion-label>
-                  <ion-input type="text"></ion-input>
-                </ion-item>
-                <ion-item color="white">
-                  <ion-label position="floating">Bairro:</ion-label>
-                  <ion-input type="text"></ion-input>
-                </ion-item>
-                <ion-item color="white">
-                  <ion-label position="floating">Cidade:</ion-label>
-                  <ion-input type="text"></ion-input>
-                </ion-item>
-                <ion-item color="white">
-                  <ion-label position="floating">Estado:</ion-label>
-                  <ion-input type="text"></ion-input>
-                </ion-item>
-                <ion-item color="white">
-                  <ion-label position="floating">CEP:</ion-label>
-                  <ion-input type="text"></ion-input>
+                  <ion-input [(ngModel)]="nome" type="text"></ion-input>
                 </ion-item>
                 <ion-item class="rounded-bottom" color="white">
                   <ion-label position="floating">CPF:</ion-label>
-                  <ion-input type="text"></ion-input>
+                  <ion-input [(ngModel)]="cpf" type="text"></ion-input>
+                </ion-item>
+                <ion-item color="white">
+                  <ion-label position="floating">Rua:</ion-label>
+                  <ion-input [(ngModel)]="rua" type="text"></ion-input>
+                </ion-item>
+                <ion-item color="white">
+                  <ion-label position="floating">Bairro:</ion-label>
+                  <ion-input [(ngModel)]="bairro" type="text"></ion-input>
+                </ion-item>
+                <ion-item color="white">
+                  <ion-label position="floating">Cidade:</ion-label>
+                  <ion-input [(ngModel)]="cidade" type="text"></ion-input>
+                </ion-item>
+                <ion-item color="white">
+                  <ion-label position="floating">Estado:</ion-label>
+                  <ion-input [(ngModel)]="estado" type="text"></ion-input>
+                </ion-item>
+                <ion-item color="white">
+                  <ion-label position="floating">CEP:</ion-label>
+                  <ion-input [(ngModel)]="cep" type="text"></ion-input>
+                </ion-item>
+                <ion-item color="white">
+                  <ion-label position="floating">Email:</ion-label>
+                  <ion-input [(ngModel)]="email" type="email"></ion-input>
+                </ion-item>
+                <ion-item color="white">
+                  <ion-label position="floating">Senha:</ion-label>
+                  <ion-input [(ngModel)]="senha" type="password"></ion-input>
+                </ion-item>
+                <ion-item color="white">
+                  <ion-label position="floating">Repita sua senha:</ion-label>
+                  <ion-input [(ngModel)]="repetirSenha" type="password"></ion-input>
                 </ion-item>
               </div>
+              <p>{{erro}}</p>
               <div class="ion-padding">
-                <ion-button size="large" expand="block" color="wine" routerLink="/pages/login">Cadastrar</ion-button>
+                <ion-button size="large" expand="block" color="wine" (click)="cadastrar()">Cadastrar</ion-button>
               </div>
               <p>Já possui uma conta? <strong routerLink="/">Faça login</strong></p>
             </ion-col>

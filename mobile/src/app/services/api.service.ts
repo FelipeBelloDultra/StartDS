@@ -76,6 +76,19 @@ export class ApiService {
     });
   }
 
+  public postCliente(nome: string, cpf: string, rua: string, bairro: string, cidade: string, estado: string, cep: string, email: string, senha: string) {
+    return new Promise((resolve, reject) => {
+      this.httpClient.post(`${this.URL_API}clientes`, {
+        nome, cpf, rua, bairro, cidade, estado, cep, email, senha
+      })
+        .subscribe((data: any) => {
+          resolve(data);
+        }, (error) => {
+          reject(error);
+        });
+    });
+  }
+
   public postPedido(idProduto: any) {
     const httpOptions = {
       headers: new HttpHeaders({
