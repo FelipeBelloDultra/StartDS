@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-
+import { Storage } from '@ionic/storage';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
@@ -8,9 +8,18 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class ApiService {
   URL_API = 'http://192.168.1.7:3333/';
 
-  constructor(private httpClient: HttpClient) { }
+  public access_token: string;
 
-
+  constructor(private httpClient: HttpClient, private storage: Storage) {
+    this.storage.get('access_token')
+      .then((data) => {
+        console.log(data);
+        this.access_token = data;
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  }
 
   public getAllPratos() {
     return new Promise((resolve, reject) => {
@@ -45,6 +54,17 @@ export class ApiService {
     });
   }
 
+  public getOneItem(id: any) {
+    return new Promise((resolve, reject) => {
+      this.httpClient.get(`${this.URL_API}produtos/${id}`)
+        .subscribe((data: any) => {
+          resolve(data);
+        }, (error) => {
+          reject(error);
+        });
+    });
+  }
+
   public postSession(email: string, senha: string) {
     return new Promise((resolve, reject) => {
       this.httpClient.post(`${this.URL_API}session`, { email, senha })
@@ -56,15 +76,21 @@ export class ApiService {
     });
   }
 
-  // public postPedido() {
-  //   const httpOptions = {
-  //     headers: new HttpHeaders({
-  //       'Accept': 'application/json',
-  //       'Authorization': 'Bearer ' + token
-  //     })
-
-  //   }
-  //   return this.httpClient.post(URL_API, httpOptions);
-  // }
+  public postPedido(idProduto: any) {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Accept': 'application/json',
+        'Authorization': 'Bearer ' + this.access_token
+      })
+    };
+    return new Promise((resolve, reject) => {
+      this.httpClient.post(`${this.URL_API}produtos/${idProduto}/pedido`, httpOptions)
+        .subscribe((data: any) => {
+          resolve(data);
+        }, (error) => {
+          reject(error);
+        });
+    });
+  }
 
 }

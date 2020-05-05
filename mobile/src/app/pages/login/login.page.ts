@@ -49,7 +49,6 @@ export class LoginPage implements OnInit {
       .then((data) => {
         if (data) {
           this.storage.remove('access_token');
-          return;
         }
       })
       .catch((error) => {
@@ -59,7 +58,6 @@ export class LoginPage implements OnInit {
       .then((data) => {
         if (data) {
           this.storage.remove('nome');
-          return;
         }
       })
       .catch((error) => {

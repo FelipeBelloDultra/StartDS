@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-food',
@@ -11,15 +12,7 @@ export class FoodPage implements OnInit {
   public listaComida: any;
   public listaFiltrada = [];
 
-  constructor(private apiService: ApiService) {
-    this.apiService.getAllPratos()
-      .then((data) => {
-        this.listaComida = data;
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-
+  constructor(private apiService: ApiService, private router: Router) {
     setTimeout(() => {
       this.inicia();
     }, 2000);
@@ -30,7 +23,7 @@ export class FoodPage implements OnInit {
   }
 
   public handleClickShowDescription(id) {
-    console.log(id);
+    this.router.navigate([`/pages/description/${id}`]);
   }
 
   public buscaComida(event) {
@@ -44,6 +37,13 @@ export class FoodPage implements OnInit {
   }
 
   ngOnInit() {
+    this.apiService.getAllPratos()
+      .then((data) => {
+        this.listaComida = data;
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }
 
 }
