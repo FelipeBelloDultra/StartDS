@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="wine">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Bebidas</ion-title>
+  </ion-toolbar>
+  <ion-toolbar color="wine">
+    <ion-searchbar animated color="white" (ionInput)="buscaComida($event)" placeholder="Buscar comida...">
+    </ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="salmon">
+  <ion-card color="white">
+    <ion-card-content *ngFor="let drink of listaFiltrada">
+      <ion-item color="white" (click)="handleClickShowDescription(drink.id_produto)">
+        <ion-thumbnail slot="start">
+          <!-- <img [src]="drink.img" alt="{{drink.nome}}"> -->
+        </ion-thumbnail>
+        <ion-label>{{ drink.nome }}</ion-label>
+        <ion-badge slot="end" color="brown">R${{ drink.preco }}</ion-badge>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

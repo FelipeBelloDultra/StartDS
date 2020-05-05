@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="wine">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Cardápio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="brown">
+  <ion-slides class="w-100 h-100" pager="true">
+    <ion-slide>
+      <ion-content color="brown">
+        <div class="h-50 shadow-sm m-3 rounded food" routerLink="/pages/list/food"></div>
+        <div class="container-fluid">
+          <h1 class="display-5 text-center text-light font-menu" routerLink="/pages/list/food">Pratos</h1>
+          <p class="text-white float-left">Arraste para ver mais opções!</p>
+        </div>
+      </ion-content>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-content color="brown">
+        <div class="h-50 shadow-sm m-3 rounded drinks" routerLink="/pages/list/drink"></div>
+        <div class="container-fluid">
+          <h1 class="display-5 text-center text-light font-menu" routerLink="/pages/list/drink">Bebidas</h1>
+          <p class="text-white float-left">Arraste para ver mais opções!</p>
+        </div>
+      </ion-content>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-content color="brown">
+        <div class="h-50 shadow-sm m-3 rounded candy" routerLink="/pages/list/candy"></div>
+        <div class="container-fluid">
+          <h1 class="display-5 text-center text-light font-menu" routerLink="/pages/list/candy">Doces</h1>
+          <p class="text-white float-left">Arraste para ver as <strong>promoções!</strong></p>
+        </div>
+      </ion-content>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-content color="brown">
+        <div class="h-50 shadow-sm m-3 rounded promotion" routerLink="/pages/promotion"></div>
+        <div class="container-fluid">
+          <h1 class="display-5 text-center text-light font-menu" routerLink="/pages/promotion">Promoções</h1>
+        </div>
+      </ion-content>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

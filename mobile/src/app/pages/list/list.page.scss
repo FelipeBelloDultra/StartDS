@@ -1,0 +1,26 @@
+.food, .drinks, .candy, .promotion {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.food {
+  background-image: url(../../../assets/menu-page/embaladagem-background-700x400.jpg);
+}
+
+.drinks {
+  background-image: url(../../../assets/menu-page/bebida-background-700x400.jpg);
+}
+
+.candy {
+  background-image: url(../../../assets/menu-page/doce-background-700x400.jpg);
+}
+
+.promotion {
+  background-image: url(../../../assets/menu-page/prato-background-700x400.jpg);
+}
+
+.font-menu {
+  background-color: rgba(#333, .5);
+  border-radius: 5px;
+}

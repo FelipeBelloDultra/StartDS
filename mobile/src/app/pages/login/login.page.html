@@ -1,0 +1,43 @@
+<ion-content color="brown">
+  <ion-slides class="w-100 h-100" scrollbar="true">
+
+    <ion-slide>
+      <ion-content color="brown">
+        <h1 class="text-center font-title">Yakizakana</h1>
+        <img src="../../assets/login/yakizakana.svg" alt="Loading" class="img-fluid">
+        <h3 class="text-center mt-5">Arreste para efetuar o login</h3>
+        <ion-icon name="arrow-forward-outline" style="font-size: 30pt;"></ion-icon>
+      </ion-content>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-content color="brown">
+        <ion-grid>
+          <ion-row color="primary" class="ion-justify-content-center">
+            <ion-col class="ion-align-self-center" size-md="6" size-lg="5" size-xs="12">
+              <div class="ion-text-center">
+                <h1 class="font-title">Login</h1>
+              </div>
+              <div class="ion-padding">
+                <ion-item class="rounded-top" color="white">
+                  <ion-label position="floating">Email:</ion-label>
+                  <ion-input [(ngModel)]="email" type="email"></ion-input>
+                </ion-item>
+                <ion-item class="rounded-bottom" color="white">
+                  <ion-label position="floating">Senha:</ion-label>
+                  <ion-input [(ngModel)]="senha" type="password"></ion-input>
+                </ion-item>
+              </div>
+              <p>{{erro}}</p>
+              <div class="ion-padding">
+                <ion-button size="large" expand="block" color="wine" (click)="autenticar()">Autenticar</ion-button>
+              </div>
+              <p>Não possui conta? <strong routerLink="/register">Cadastre-se</strong></p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-content>
+    </ion-slide>
+
+  </ion-slides>
+</ion-content>
