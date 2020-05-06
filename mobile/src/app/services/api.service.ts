@@ -6,8 +6,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ApiService {
-  URL_API = 'http://192.168.1.7:3333/';
 
+  URL_API = 'http://192.168.1.7:3333/';
   public access_token: string;
 
   constructor(private httpClient: HttpClient, private storage: Storage) {
@@ -96,8 +96,9 @@ export class ApiService {
         'Authorization': 'Bearer ' + this.access_token
       })
     };
+    console.log(httpOptions.headers);
     return new Promise((resolve, reject) => {
-      this.httpClient.post(`${this.URL_API}produtos/${idProduto}/pedido`, httpOptions)
+      this.httpClient.post(`${this.URL_API}produtos/${idProduto}/pedido`, {}, httpOptions)
         .subscribe((data: any) => {
           resolve(data);
         }, (error) => {

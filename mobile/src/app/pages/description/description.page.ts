@@ -14,6 +14,17 @@ export class DescriptionPage implements OnInit {
   constructor(private apiService: ApiService, private route: ActivatedRoute) {
   }
 
+  public addCart(id) {
+
+    this.apiService.postPedido(id)
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
   ngOnInit() {
     this.route.params.subscribe((param) => {
       this.apiService.getOneItem(param.id)

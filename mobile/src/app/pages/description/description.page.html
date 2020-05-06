@@ -19,7 +19,7 @@
     <ion-card-content>
       {{ produto.descricao }}
     </ion-card-content>
-    <ion-button class="m-3" expand="block" color="success">
+    <ion-button class="m-3" expand="block" color="success" (click)="addCart(produto.id_produto)">
       Adicionar ao carrinho <ion-icon name="cart"></ion-icon>
     </ion-button>
   </ion-card>
